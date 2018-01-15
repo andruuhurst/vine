@@ -117,6 +117,10 @@ add_action( 'widgets_init', 'vine_widgets_init' );
  * Enqueue scripts and styles.
  */
 function vine_scripts() {
+
+	//Enqueue Google Fonts : Roboto
+	wp_enqueue_style( 'vine-fonts', 'https://fonts.googleapis.com/css?family=Open+Sans:400,700|Roboto:400,400i,700,700i' );	
+
 	wp_enqueue_style( 'vine-style', get_stylesheet_uri() );
 
 	wp_enqueue_script( 'vine-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
@@ -155,4 +159,3 @@ require get_template_directory() . '/inc/customizer.php';
 if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
-

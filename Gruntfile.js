@@ -13,7 +13,7 @@ module.exports = function(grunt) {
 		      sourcemap: 'none',
 		    },
 		    files: {
-		      'compiled/style.css': 'sass/style.scss'
+		      'compiled/style-human.css': 'sass/style.scss'
 		    }
 		  },
       dist: {
@@ -22,23 +22,40 @@ module.exports = function(grunt) {
 		      sourcemap: 'none',
 		    },
 		    files: {
-		      'compiled/style-min.css': 'sass/style.scss'
+		      'compiled/style.css': 'sass/style.scss'
 		    }
 		  }
 		},
 
+    /**
+     * Autoprefixer
+     */
+     postcss: {
+       options: {
+         processors: [
+           require('autoprefixer')({browsers: ['last 2 version']})
+         ]
+       },
+       multiple_files: {
+         expand: true,
+         flatten: true,
+         src: 'compiled/*.css',
+         dest: ''
+       }
+     },
 	  	/**
 	  	 * Watch
 	  	 */
 		watch: {
 			css: {
 				files: '**/*.scss',
-				tasks: ['sass']
+				tasks: ['sass', 'postcss']
 			}
 		},
 
 	});
 	grunt.loadNpmTasks('grunt-contrib-sass');
 	grunt.loadNpmTasks('grunt-contrib-watch');
+  grunt.loadNpmTasks('grunt-postcss');
 	grunt.registerTask('default',['watch']);
 }

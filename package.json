@@ -20,6 +20,7 @@
   },
   "homepage": "https://github.com/borozcod/vine#readme",
   "devDependencies": {
+    "autoprefixer": "^7.2.5",
     "grunt": "^1.0.1",
     "grunt-contrib-sass": "^1.0.0",
     "grunt-contrib-watch": "^1.0.0",

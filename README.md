@@ -6,16 +6,9 @@ Mobile first WordPress template. Ideal for non-profits and media driven organiza
 
 Download and Install the theme.
 
-
-Give examples
-```
-
-### Installing
-
-Clone the theme directory
+or clone the git repository
 ```
 git clone https://github.com/borozcod/vine.git
-
 ```
 
 ## Built With

@@ -1,0 +1,28 @@
+{
+  "name": "vine",
+  "version": "1.0.0",
+  "description": "Vine WordPress Theme",
+  "main": "index.php",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/borozcod/vine.git"
+  },
+  "keywords": [
+    "wordpress"
+  ],
+  "author": "bryan orozco, andrew hurst",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/borozcod/vine/issues"
+  },
+  "homepage": "https://github.com/borozcod/vine#readme",
+  "devDependencies": {
+    "grunt": "^1.0.1",
+    "grunt-contrib-sass": "^1.0.0",
+    "grunt-contrib-watch": "^1.0.0",
+    "grunt-postcss": "^0.9.0"
+  }
+}

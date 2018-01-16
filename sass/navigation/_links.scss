@@ -1,4 +1,5 @@
 a {
+	@include transition(all 0.25s);
 	color: $color__link;
 
 	&:visited {

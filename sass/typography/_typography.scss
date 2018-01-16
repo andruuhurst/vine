@@ -6,9 +6,9 @@ optgroup,
 textarea {
 	color: $color__text-main;
 	font-family: $font__roboto;
-	@include font-size(1);
-	@media #{$tablet} {
-		@include font-size(0.8);
+	@include font-size(0.8);
+	@include responsive($tablet){
+		@include font-size(1);
 	}
 	line-height: $font__line-height-body;
 }

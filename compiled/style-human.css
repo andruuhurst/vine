@@ -266,19 +266,19 @@ optgroup,
 textarea {
   color: #404040;
   font-family: "Roboto", sans-serif;
-  font-size: 16px;
-  font-size: 1rem;
+  font-size: 12.8px;
+  font-size: 0.8rem;
   line-height: 1.5;
 }
-@media (max-width: 767px) {
+@media screen and (min-width: 767px) {
   body,
   button,
   input,
   select,
   optgroup,
   textarea {
-    font-size: 12.8px;
-    font-size: 0.8rem;
+    font-size: 16px;
+    font-size: 1rem;
   }
 }
 
@@ -395,7 +395,7 @@ img {
 }
 
 figure {
-  margin: 1em 0;
+  margin: 0;
   /* Extra wide images within figure tags don't overflow the content area. */
 }
 
@@ -492,10 +492,14 @@ textarea {
 ## Links
 --------------------------------------------------------------*/
 a {
-  color: royalblue;
+  -moz-transition: all 0.25s;
+  -o-transition: all 0.25s;
+  -webkit-transition: all 0.25s;
+  transition: all 0.25s;
+  color: #5B9496;
 }
 a:visited {
-  color: purple;
+  color: #5B9496;
 }
 a:hover, a:focus, a:active {
   color: midnightblue;
@@ -551,6 +555,8 @@ a:hover, a:active {
 .main-navigation a {
   display: block;
   text-decoration: none;
+  font-weight: 900;
+  color: black;
 }
 
 /* Small menu. */
@@ -680,19 +686,102 @@ a:hover, a:active {
 }
 
 /*--------------------------------------------------------------
-# Widgets
+# Content
 --------------------------------------------------------------*/
-.widget {
-  margin: 0 0 1.5em;
-  /* Make sure select elements fit in widgets. */
+/*--------------------------------------------------------------
+## Globals
+--------------------------------------------------------------*/
+.site-content {
+  padding: 1em;
 }
-.widget select {
-  max-width: 100%;
+@media (min-width: 1200px) {
+  .site-content {
+    padding: 2em;
+  }
 }
 
 /*--------------------------------------------------------------
-# Content
+## Header
 --------------------------------------------------------------*/
+.header-image {
+  max-height: 60vh;
+  overflow: hidden;
+}
+.header-image img {
+  display: block;
+  width: 100vw;
+}
+
+.site-header {
+  position: relative;
+  padding: 1em;
+  font-family: "Open Sans", sans-serif;
+  color: #fff;
+}
+@media screen and (min-width: 1200px) {
+  .site-header {
+    padding: 1em 2em;
+  }
+}
+
+.site-branding {
+  min-height: 65px;
+}
+.site-branding .site-logo {
+  position: absolute;
+  top: 0px;
+  background-color: #F6EDD3;
+  padding: 18px;
+  height: 100%;
+}
+
+.site-title {
+  margin: 0;
+  padding: 0;
+  font-size: 1.6em;
+  font-weight: 900;
+  line-height: 1em;
+}
+.site-title a {
+  color: white;
+  text-decoration: none;
+}
+.site-title a:hover, .site-title a:focus {
+  color: #5B9496;
+}
+
+.site-description {
+  margin: 0;
+  font-size: .9em;
+  font-style: italic;
+  font-weight: 100;
+}
+
+#site-navigation a:hover {
+  color: #5B9496;
+}
+#site-navigation .current_page_item a {
+  color: #5B9496;
+}
+
+@media screen and (min-width: 900px) {
+  .site-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .site-branding {
+    width: 45%;
+  }
+
+  #site-navigation {
+    width: 55%;
+  }
+  #site-navigation ul li {
+    margin: 0px 10px;
+  }
+}
 /*--------------------------------------------------------------
 ## Posts and pages
 --------------------------------------------------------------*/
@@ -728,6 +817,17 @@ a:hover, a:active {
 
 .bypostauthor {
   display: block;
+}
+
+/*--------------------------------------------------------------
+# Widgets
+--------------------------------------------------------------*/
+.widget {
+  margin: 0 0 1.5em;
+  /* Make sure select elements fit in widgets. */
+}
+.widget select {
+  max-width: 100%;
 }
 
 /*--------------------------------------------------------------
@@ -829,19 +929,4 @@ object {
 
 .gallery-caption {
   display: block;
-}
-
-/*--------------------------------------------------------------
-# Layout
---------------------------------------------------------------*/
-.site-content {
-  display: flex;
-}
-
-.content-area {
-  flex: 2;
-}
-
-.site-content .widget-area {
-  flex: 1;
 }

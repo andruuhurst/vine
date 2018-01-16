@@ -1,5 +1,6 @@
-$phone : '(max-width: 480px)';
-$tablet: '(max-width: 767px)';
+$phone: '(min-width: 480px)';
+$tablet: '(min-width: 767px)';
+$medium: '(min-width: 900px)';
 $tablet-portrait: '(max-width: 767px)';
 $tablet-landscape: '(min-width: 768px) and (max-width: 979px)';
 $large-desktop: '(min-width: 1200px)';
@@ -10,3 +11,9 @@ $retina: '(min--moz-device-pixel-ratio: 1.5),
                     (min-device-pixel-ratio: 1.5),
                     (min-resolution: 144dpi),
                     (min-resolution: 1.5dppx)';
+
+@mixin responsive($media) {
+    @media screen and #{$media} {
+        @content;
+    }
+}

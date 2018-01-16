@@ -19,9 +19,9 @@
 function vine_custom_header_setup() {
 	add_theme_support( 'custom-header', apply_filters( 'vine_custom_header_args', array(
 		'default-image'          => '',
-		'default-text-color'     => '000000',
-		'width'                  => 1000,
-		'height'                 => 250,
+		'default-text-color'     => 'ffffff',
+		'width'                  => 2000,
+		'height'                 => 850,
 		'flex-height'            => true,
 		'wp-head-callback'       => 'vine_header_style',
 	) ) );

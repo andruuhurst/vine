@@ -19,7 +19,7 @@ module.exports = function(grunt) {
       dist: {
 		    options: {
 		      style: 'compressed',
-		      sourcemap: 'none',
+		      sourcemap: 'auto',
 		    },
 		    files: {
 		      'compiled/style.css': 'sass/style.scss'
@@ -32,9 +32,10 @@ module.exports = function(grunt) {
      */
      postcss: {
        options: {
-         processors: [
+        map: true,
+        processors: [
            require('autoprefixer')({browsers: ['last 2 version']})
-         ]
+        ]
        },
        multiple_files: {
          expand: true,

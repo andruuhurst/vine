@@ -8,23 +8,29 @@
 }
 
 .site-header {
-    position: relative;
+    position: absolute;
+    z-index: 10;
+    right: 0;
+    left: 0;
     padding: 1em;
+    margin: 0 2em;
     font-family: $font__open_sans;
     color: #fff;
+    background: rgba(0,0,0,0.2);
     @include responsive($large-desktop) {
         padding: 1em 2em;
     }
 }
 
 .site-branding {
-    min-height: 65px;
-    .site-logo {
-        position: absolute;
-        top: 0px;
-        background-color: $color__albescent-white;
-        padding: 18px;
-        height: 100%;
+    max-width: 150px;
+}
+
+.site-menu {
+    margin-right: 20px;
+    flex: 1 0 auto;
+    img {
+        width:30px;
     }
 }
 
@@ -72,14 +78,17 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
+        flex-wrap: wrap;
     }
 
     .site-branding {
-        width: 45%;
+        flex: 1 0 auto;
+        width: 20%;
     }
 
     #site-navigation {
-        width: 55%;
+        width: 70%;
+        flex: 1 0 auto;
         ul {
             li {
                 margin: 0px 10px;
@@ -87,3 +96,8 @@
         }
     }
 }
+/*
+*Include Header Menu
+*/
+
+@import "header-menu";

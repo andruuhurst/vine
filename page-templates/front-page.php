@@ -12,11 +12,57 @@
  * @package Vine
  */
 
-get_header(); ?>
+get_header();
+$home_dir = get_template_directory_uri();
+?>
+	<div class="hero">
+		<?php
+		$args = array(
+			'numberposts' => 1,
+			'orderby' => 'post_date',
+			'order' => 'DESC',
+			'post_type' => 'serie',
+			'post_status' => 'publish',
+			'suppress_filters' => true
+		);
 
+		$recent_posts = wp_get_recent_posts( $args );
+		$post_meda = $recent_posts[0];
+
+		$series_thumbnail = get_the_post_thumbnail_url($post_meda['ID']);
+		// Grab the sermon from the database
+		$sermons = get_post_meta( $post_meda['ID'], 'sermons', true );
+		$sermon = end($sermons);
+		$sermonId = count($sermons) - 1;
+		$link = get_permalink($post_meda['ID']) .'?sermonID='. $sermonId  .'/';
+		if(isset($sermon['sermon_speaker'])){
+			$speaker = $sermon['sermon_speaker'];
+		}
+		if(isset($sermon['sermon_location'])){
+			$location = $sermon['sermon_location'];
+		}
+		if(isset($sermon['sermon_title'])){
+			$title = $sermon['sermon_title'];
+		}
+		if(isset($sermon['sermon_video_link'])){
+			$video_url = $sermon['sermon_video_link'];
+		}
+		?>
+		<div class="series-graphic" style="background:url(<?php echo $series_thumbnail; ?>) ;"></div>
+		<div class="sermon-description">
+			<div class="play">
+				<a href="<?php echo $link; ?>">
+					<i class="fa fa-play" aria-hidden="true"></i>
+				</a>
+			</div>
+			<div class="desc">
+				<h2><?php echo $title; ?></h2>
+				<p><?php echo $speaker; ?></p>
+			</div>
+		</div>
+	</div>
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main">
-
 		<?php
 		if ( have_posts() ) :
 

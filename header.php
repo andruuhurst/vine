@@ -33,6 +33,9 @@
 		</figure><!-- header-image -->
 	<?php endif; ?>
 	<header id="masthead" class="site-header">
+		<div class="site-menu">
+			<a href="javascript:;"><img src="<?php echo get_template_directory_uri(); ?>/images/menu.svg"/></a>
+		</div>
 		<div class="site-branding">
 			<?php
 			if(get_custom_logo()) :

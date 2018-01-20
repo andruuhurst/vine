@@ -1,0 +1,51 @@
+.page-template-front-page {
+    .hero {
+      margin: -1em -1em 0 -1em;
+      height: 80vh;
+      position: relative;
+      @media #{$large-desktop} {
+        margin: -2em -2em 0 -2em;
+      }
+      .series-graphic {
+          height: 100%;
+          background-size: cover!important;
+      }
+      .sermon-description {
+          position: absolute;
+          bottom: 0px;
+          display: flex;
+          width: 100%;
+          justify-content: space-between;
+          align-items: center;
+          background-color: $color__albescent-white;
+          @media #{$medium} {
+            width: auto;
+          }
+          .play {
+              padding: 0px 30px;
+              a {
+                  font-size: 40px;
+                  display: block;
+                  &:hover {
+                      svg {
+                          fill:$color__shadow-green;
+                      }
+                  }
+              }
+              // background-image: url(kiwi.png);
+          }
+          .desc {
+              padding: 0px 30px;
+              background-color: $color__firefly;
+              color: $color__albescent-white;
+              flex: 1 0 auto;
+              h2 {
+                    margin: 10px 0px;
+              }
+              p {
+                    margin: 10px 0px;
+              }
+          }
+      }
+    }
+}

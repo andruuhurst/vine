@@ -67,6 +67,12 @@
 	.menu-item-has-children,
 	.page-item-has-children {
 		min-width: 218px;
+		background-color: $color__firefly;
+		.sub-menu {
+			position: absolute;
+			background-color: $color__firefly;
+			top: auto;
+		}
 	}
 	.menu-item-has-children > a,
 	.page_item_has_children > a {
@@ -81,7 +87,13 @@ button.dropdown-toggle {
 	background: inherit;
 	color: white;
 	line-height: 1.5em;
-	padding: .4em 1em .4em .5em;
+	height: 100%;
+    width: 40px;
+    background: $color__firefly;
+    border-radius: 0px;
+	i {
+		font-size: 25px;
+	}
 }
 
 .menu-toggle {

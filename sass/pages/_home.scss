@@ -1,7 +1,7 @@
 .page-template-front-page {
     .hero {
       margin: -1em -1em 0 -1em;
-      height: 80vh;
+      height: 90vh;
       position: relative;
       @media #{$large-desktop} {
         margin: -2em -2em 0 -2em;
@@ -26,11 +26,10 @@
               a {
                   font-size: 40px;
                   display: block;
-                  &:hover {
-                      svg {
-                          fill:$color__shadow-green;
-                      }
-                  }
+                  color: $color__firefly;
+                 &:hover {
+                     color: #fff;
+                 }
               }
               // background-image: url(kiwi.png);
           }

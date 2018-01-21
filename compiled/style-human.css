@@ -650,7 +650,7 @@ a:hover, a:active {
 }
 
 .site-header {
-  position: absolute;
+  position: fixed;
   z-index: 10;
   right: 0;
   left: 0;
@@ -782,6 +782,13 @@ a:hover, a:active {
 .main-navigation .menu-item-has-children,
 .main-navigation .page-item-has-children {
   min-width: 218px;
+  background-color: #0A1827;
+}
+.main-navigation .menu-item-has-children .sub-menu,
+.main-navigation .page-item-has-children .sub-menu {
+  position: absolute;
+  background-color: #0A1827;
+  top: auto;
 }
 .main-navigation .menu-item-has-children > a,
 .main-navigation .page_item_has_children > a {
@@ -795,7 +802,13 @@ button.dropdown-toggle {
   background: inherit;
   color: white;
   line-height: 1.5em;
-  padding: .4em 1em .4em .5em;
+  height: 100%;
+  width: 40px;
+  background: #0A1827;
+  border-radius: 0px;
+}
+button.dropdown-toggle i {
+  font-size: 25px;
 }
 
 .menu-toggle {
@@ -1011,7 +1024,7 @@ object {
 --------------------------------------------------------------*/
 .page-template-front-page .hero {
   margin: -1em -1em 0 -1em;
-  height: 80vh;
+  height: 90vh;
   position: relative;
 }
 @media (min-width: 1200px) {
@@ -1043,9 +1056,10 @@ object {
 .page-template-front-page .hero .sermon-description .play a {
   font-size: 40px;
   display: block;
+  color: #0A1827;
 }
-.page-template-front-page .hero .sermon-description .play a:hover svg {
-  fill: #9AC0BA;
+.page-template-front-page .hero .sermon-description .play a:hover {
+  color: #fff;
 }
 .page-template-front-page .hero .sermon-description .desc {
   padding: 0px 30px;

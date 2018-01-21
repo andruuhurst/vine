@@ -123,7 +123,11 @@ function vine_scripts() {
 	wp_enqueue_style( 'vine-style', get_stylesheet_uri() );
 	wp_enqueue_style( 'fontawesome', 'https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
 
-	wp_enqueue_script( 'vine-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
+	wp_enqueue_script( 'vine-navigation', get_template_directory_uri() . '/js/navigation.js', array('jquery'), '20151216', true );
+	wp_localize_script('vine-navigation', 'vineScreenReaderText', array(
+		'expand' => __('Expand child menu', 'vine'),
+		'collapse' => __('Collapse child menu', 'vine')
+	));
 
 	wp_enqueue_script( 'vine-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
 

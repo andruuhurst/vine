@@ -775,10 +775,6 @@ a:hover, a:active {
   text-decoration: none;
   color: #fff;
 }
-.main-navigation a:hover,
-.main-navigation a:focus {
-  text-decoration: underline;
-}
 .main-navigation .menu-item-has-children,
 .main-navigation .page-item-has-children {
   min-width: 218px;

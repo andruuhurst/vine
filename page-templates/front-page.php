@@ -21,7 +21,7 @@ $home_dir = get_template_directory_uri();
 			'numberposts' => 1,
 			'orderby' => 'post_date',
 			'order' => 'DESC',
-			'post_type' => 'serie',
+			'post_type' => 'series',
 			'post_status' => 'publish',
 			'suppress_filters' => true
 		);

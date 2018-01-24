@@ -1084,3 +1084,31 @@ object {
 .page-template-front-page .hero .sermon-description .desc p {
   margin: 10px 0px;
 }
+
+/*--------------------------------------------------------------
+# Series
+--------------------------------------------------------------*/
+.single-series .series-graphic {
+  height: 40vh;
+  margin: -2em -2em 0em;
+}
+.single-series .series .series-title {
+  text-transform: uppercase;
+  font-size: 2em;
+}
+.single-series .series .series-title a {
+  text-decoration: none;
+  position: relative;
+  z-index: 2;
+}
+.single-series .series .series-title a:after {
+  content: '';
+  width: 56px;
+  height: 10px;
+  background-color: #000;
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: -2em;
+  z-index: 1;
+}

@@ -8,18 +8,14 @@
  */
 
 get_header();
-
-
-echo get_query_var("sermon");
-
 ?>
 
-	<div id="primary" class="content-area">
+	<div id="primary" class="content-area series-content" data-sermon-id="<?php echo get_query_var("sermon");?>">
 		<main id="main" class="site-main">
 
 		<?php
 		while ( have_posts() ) : the_post();
-
+			get_sidebar('series');
 			get_template_part( 'template-parts/content', get_post_type() );
 
 			the_post_navigation();

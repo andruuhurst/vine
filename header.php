@@ -20,7 +20,7 @@
 	<?php wp_head(); ?>
 </head>
 
-<body <?php body_class(); ?>>
+<body <?php body_class(); ?> data-page-id="<?php the_ID(); ?>">
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'vine' ); ?></a>
 	<?php if ( get_header_image() ) : ?>

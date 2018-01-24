@@ -1,0 +1,28 @@
+.single-series {
+    .series-graphic {
+        height: 40vh;
+        margin: -2em -2em 0em;
+    }
+    .series {
+        .series-title {
+            text-transform: uppercase;
+            font-size: 2em;
+            a {
+                text-decoration: none;
+                position: relative;
+                z-index: 2;
+                &:after {
+                    content: '';
+                    width: 56px;
+                    height: 10px;
+                    background-color: #000;
+                    display: block;
+                    position: absolute;
+                    top: 50%;
+                    left: -2em;
+                    z-index: 1;
+                }
+            }
+        }
+    }
+}

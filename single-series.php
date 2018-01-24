@@ -7,7 +7,12 @@
  * @package Vine
  */
 
-get_header(); ?>
+get_header();
+
+
+echo get_query_var("sermon");
+
+?>
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main">

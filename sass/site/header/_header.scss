@@ -17,6 +17,19 @@
     font-family: $font__open_sans;
     color: #fff;
     background: rgba(0,0,0,0.2);
+    @include transition(all .25s);
+    &.scroll {
+        margin: 0;
+        background: rgba(255,255,255,1);
+        border-bottom: solid 4px #000;
+        li {
+            &:not(.menu-item-has-children){
+                a {
+                    color: #000;
+                }
+            }
+        }
+    }
     @include responsive($large-desktop) {
         padding: 1em 2em;
     }

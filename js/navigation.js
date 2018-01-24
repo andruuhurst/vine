@@ -106,4 +106,13 @@
 			$( this ).parents( '.menu-item, .page_item' ).toggleClass( 'focus' );
 		});
 	})();
+
+	$(window).on('scroll', function(){
+		if($(this).scrollTop() > 0 ){
+			$('.site-header').addClass('scroll');
+		}else{
+			$('.site-header').removeClass('scroll');
+		}
+	});
+
 })( jQuery );

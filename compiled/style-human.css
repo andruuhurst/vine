@@ -659,6 +659,18 @@ a:hover, a:active {
   font-family: "Open Sans", sans-serif;
   color: #fff;
   background: rgba(0, 0, 0, 0.2);
+  -moz-transition: all 0.25s;
+  -o-transition: all 0.25s;
+  -webkit-transition: all 0.25s;
+  transition: all 0.25s;
+}
+.site-header.scroll {
+  margin: 0;
+  background: white;
+  border-bottom: solid 4px #000;
+}
+.site-header.scroll li:not(.menu-item-has-children) a {
+  color: #000;
 }
 @media screen and (min-width: 1200px) {
   .site-header {
@@ -760,6 +772,7 @@ a:hover, a:active {
 }
 .main-navigation ul ul a {
   width: 200px;
+  color: #fff !important;
 }
 .main-navigation ul li:hover > ul,
 .main-navigation ul li.focus > ul {
@@ -774,6 +787,8 @@ a:hover, a:active {
   padding: .5em 1em .5em 0;
   text-decoration: none;
   color: #fff;
+  text-transform: uppercase;
+  font-weight: 600;
 }
 .main-navigation .menu-item-has-children,
 .main-navigation .page-item-has-children {

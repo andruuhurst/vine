@@ -498,9 +498,6 @@ a {
   transition: all 0.25s;
   color: #e75252;
 }
-a:visited {
-  color: #e75252;
-}
 a:hover, a:focus, a:active {
   color: midnightblue;
 }
@@ -575,6 +572,24 @@ a:hover, a:active {
 }
 
 /*--------------------------------------------------------------
+# Page Transition
+--------------------------------------------------------------*/
+.site-content {
+  -webkit-transition: -webkit-transform .28s, opacity .28s;
+  -ms-transition: -o-transform .28s, opacity .28s;
+  -o-transition: -o-transform .28s, opacity .28s;
+  transition: transform .28s, opacity .28s;
+}
+
+.slide-out .site-content {
+  -webkit-transform: translate3d(0, 100px, 0);
+  -ms-transform: translate3d(0, 100px, 0);
+  -o-transform: translate3d(0, 100px, 0);
+  transform: translate3d(0, 100px, 0);
+  opacity: 0;
+}
+
+/*--------------------------------------------------------------
 # Alignments
 --------------------------------------------------------------*/
 .alignleft {
@@ -635,6 +650,13 @@ a:hover, a:active {
   .site-content {
     padding: 2em;
   }
+}
+
+.header-graphic {
+  background-size: cover !important;
+  background-position: 100% !important;
+  height: 40vh;
+  margin: -2em -2em 0em;
 }
 
 /*--------------------------------------------------------------
@@ -914,6 +936,23 @@ button.dropdown-toggle i {
 
 .bypostauthor {
   display: block;
+}
+
+/*--------------------------------------------------------------
+## Footer
+--------------------------------------------------------------*/
+footer.site-footer {
+  padding: 1em;
+  background-color: #0A1827;
+}
+footer.site-footer a {
+  color: white;
+  text-decoration: none;
+}
+@media screen and (min-width: 1200px) {
+  footer.site-footer {
+    padding: 1em 2em;
+  }
 }
 
 /*--------------------------------------------------------------

@@ -1,10 +1,6 @@
 a {
 	@include transition(all 0.25s);
 	color: $color__link;
-
-	&:visited {
-		color: $color__link-visited;
-	}
 	&:hover,
 	&:focus,
 	&:active {

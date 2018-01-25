@@ -10,17 +10,16 @@
  */
 
 ?>
+		</div><!-- #content -->
 
-	</div><!-- #content -->
-
-	<footer id="colophon" class="site-footer">
-		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'vine' ) ); ?>"><?php
-				/* translators: %s: CMS name, i.e. WordPress. */
-				printf( esc_html__( 'Proudly powered by %s', 'vine' ), 'WordPress' );
-			?></a>		
-		</div><!-- .site-info -->
-	</footer><!-- #colophon -->
+		<footer id="colophon" class="site-footer">
+			<div class="site-info">
+				<a href="http://bryanorozco.com" target="_blank">
+					Developed by Bryan Orozco
+				</a>
+			</div><!-- .site-info -->
+		</footer><!-- #colophon -->
+	</div><!-- #page-inner body classes -->
 </div><!-- #page -->
 
 <?php wp_footer(); ?>

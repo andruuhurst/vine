@@ -1,0 +1,11 @@
+footer.site-footer {
+    padding: 1em;
+    background-color: $color__firefly;
+    a {
+        color: white;
+        text-decoration: none;
+    }
+    @include responsive($large-desktop) {
+        padding: 1em 2em;
+    }
+}

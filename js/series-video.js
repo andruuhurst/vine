@@ -1,5 +1,5 @@
 $(document).ready(function(){
-    var page_id = $('body').data('page-id');
+    var page_id = $('#page-inner').data('page-id');
     var sermon_id = $('.series-content').data('sermon-id');
     $.get("http://localhost/wp-json/wp/v2/series/" + page_id , function(data, status){
         //results = $.parseJSON(data);

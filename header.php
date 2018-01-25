@@ -20,20 +20,10 @@
 	<?php wp_head(); ?>
 </head>
 
-<body <?php body_class(); ?> data-page-id="<?php the_ID(); ?>">
-<div id="page" class="site">
+<body>
+<div id="page">
+	<div <?php  body_class();  ?>  data-page-id="<?php the_ID(); ?>" id="page-inner">
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'vine' ); ?></a>
-	<?php if(!is_front_page() && !is_singular('series') && !is_home()){ ?>
-		<?php if ( get_header_image() ) : ?>
-			<figure class="header-image">
-				<div id="site-header">
-			        <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
-			            <img src="<?php header_image(); ?>" width="<?php echo get_custom_header()->width; ?>" height="<?php echo get_custom_header()->height; ?>" alt="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>">
-			        </a>
-			    </div>
-			</figure><!-- header-image -->
-		<?php endif; ?>
-	<?php } ?>
 	<header id="masthead" class="site-header">
 		<div class="site-menu">
 			<a href="javascript:;"><img src="<?php echo get_template_directory_uri(); ?>/images/menu.svg"/></a>
@@ -70,3 +60,10 @@
 		</nav><!-- #site-navigation -->
 	</header><!-- #masthead -->
 	<div id="content" class="site-content">
+	<?php if(!is_front_page() && !is_singular('series') && !is_home()){ ?>
+		<?php if ( get_header_image() ) : ?>
+			<div class="header-graphic" style="background:url(<?php header_image(); ?>) ;">
+
+			</div>
+		<?php endif; ?>
+	<?php } ?>

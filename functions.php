@@ -125,12 +125,15 @@ function vine_scripts() {
 
 	wp_deregister_script('jquery');
 	wp_enqueue_script('jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js', array(), null, true);
-
 	wp_enqueue_script( 'vine-navigation', get_template_directory_uri() . '/js/navigation.js', array('jquery'), '20151216', true );
 	wp_localize_script('vine-navigation', 'vineScreenReaderText', array(
 		'expand' => __('Expand child menu', 'vine'),
 		'collapse' => __('Collapse child menu', 'vine')
 	));
+	wp_enqueue_script( 'smoothstate-js',  get_template_directory_uri() . '/js/smoothstate.js', array( 'jquery' ), '0.5.2' );
+	wp_enqueue_script( 'page-transition', get_template_directory_uri() . '/js/page-transition.js', array( 'jquery', 'smoothstate-js' ), '1.0.0' );
+
+
 
 	wp_enqueue_script( 'vine-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
 

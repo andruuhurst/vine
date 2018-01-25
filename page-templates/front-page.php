@@ -30,10 +30,10 @@ $home_dir = get_template_directory_uri();
 		$post_meda = $recent_posts[0];
 
 		$series_thumbnail = get_the_post_thumbnail_url($post_meda['ID']);
-		
+
 		$sermons = get_post_meta( $post_meda['ID'], 'sermons', true );
 		$sermon = end($sermons);
-		$sermonId = count($sermons) - 1;
+		$sermonId = count($sermons);
 		$link = get_permalink($post_meda['ID']) .''. $sermonId  .'/';
 
 		if(isset($sermon['sermon_speaker'])){

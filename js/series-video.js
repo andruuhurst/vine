@@ -21,7 +21,7 @@ function getId(url) {
 
 function load_video(url) {
     var videoId = getId(url);
-    var iframeMarkup = '<iframe width="560" height="315" src="//www.youtube.com/embed/'
-        + videoId + '" frameborder="0" allowfullscreen></iframe>';
+    var iframeMarkup = '<div class="series-video"><iframe width="560" height="315" src="//www.youtube.com/embed/'
+        + videoId + '" frameborder="0" allowfullscreen></iframe></div>';
     $('#sermon-video').append(iframeMarkup);
 }

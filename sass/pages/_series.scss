@@ -1,5 +1,7 @@
 .single-series {
     .series-graphic {
+        background-size: cover!important;
+        background-position: 100%!important;
         height: 40vh;
         margin: -2em -2em 0em;
     }
@@ -11,17 +13,19 @@
                 text-decoration: none;
                 position: relative;
                 z-index: 2;
-                &:after {
-                    content: '';
-                    width: 56px;
-                    height: 10px;
-                    background-color: #000;
-                    display: block;
-                    position: absolute;
-                    top: 50%;
-                    left: -2em;
-                    z-index: 1;
-                }
+            }
+        }
+        .series-video {
+            position: relative;
+        	padding-bottom: 56.25%; /* 16:9 */
+        	padding-top: 25px;
+        	height: 0;
+            iframe {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
             }
         }
     }

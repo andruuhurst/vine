@@ -4,8 +4,39 @@
     -o-transition: -o-transform .28s, opacity .28s;
     transition: transform .28s, opacity .28s;
 }
+
+.home {
+    .hero {
+        @include transition(all .25s);
+        .sermon-description {
+            @include transition(all .25s);
+        }
+    }
+}
+
+article {
+    @include transition(all .25s);
+}
+
+.header-img {
+    @include transition(all .25s);
+}
+
 .slide-out {
-    .site-content {
+    .home {
+        .hero {
+            height: 60vh;
+            .sermon-description {
+                bottom: -90px;
+            }
+        }
+    }
+
+    .header-img {
+        top: 60vh;
+    }
+
+    article {
         -webkit-transform: translate3d( 0, 100px, 0 );
         -ms-transform: translate3d( 0, 100px, 0 );
         -o-transform: translate3d( 0, 100px, 0 );

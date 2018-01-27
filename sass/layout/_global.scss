@@ -5,9 +5,13 @@
    }
  }
 
+.site-main {
+    min-height: 100vh;
+}
+
  .header-graphic {
      background-size: cover!important;
      background-position: 100%!important;
-     height: 40vh;
+     height: 60vh;
      margin: -2em -2em 0em;
  }

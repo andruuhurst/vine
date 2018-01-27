@@ -3,6 +3,7 @@
       margin: -1em -1em 0 -1em;
       height: 90vh;
       position: relative;
+      overflow: hidden;
       @media #{$large-desktop} {
         margin: -2em -2em 0 -2em;
       }
@@ -28,7 +29,7 @@
                   display: block;
                   color: $color__firefly;
                  &:hover {
-                     color: #fff;
+                     color: $color__breaker-bay;
                  }
               }
               // background-image: url(kiwi.png);

@@ -49,7 +49,7 @@ $home_dir = get_template_directory_uri();
 			$video_url = $sermon['sermon_video_link'];
 		}
 		?>
-		<div class="series-graphic" style="background:url(<?php echo $series_thumbnail; ?>) ;"></div>
+		<div class="series-graphic" style="background:url(<?php echo $series_thumbnail; ?>) center center ;"></div>
 		<div class="sermon-description">
 			<div class="play">
 				<a href="<?php echo $link; ?>">

@@ -7,18 +7,32 @@
  * @package Vine
  */
 
+ $sermons = get_post_meta( get_the_ID(), 'sermons', true );
+ $sermonID =  get_query_var("sermon");
+ $thisSermon = $sermons[$sermonID - 1];
+
+
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header class="entry-header">
 		<?php
-			the_title( '<h2 class="entry-title series-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
+            $sermonTitle = $thisSermon['sermon_title'];
 		?>
+        <h2><?php echo $sermonTitle; ?></h2>
 	</header><!-- .entry-header -->
+    <?php
+
+    $url = $thisSermon['sermon_video_link'];
+    preg_match('/[\\?\\&]v=([^\\?\\&]+)/', $url, $matches);
+    $id = $matches[1];
+    ?>
 
 	<div class="entry-content">
-        <script src="<?php echo get_template_directory_uri(); ?>/js/series-video.js" type="text/javascript" defer=""></script>
-        <div id="sermon-video">
+        <div class="sermon-video">
+            <iframe id="ytplayer" type="text/html"
+            src="https://www.youtube.com/embed/<?php echo $id ?>?rel=0&showinfo=0&color=white&iv_load_policy=3"
+            frameborder="0" allowfullscreen></iframe>
         </div>
 	</div><!-- .entry-content -->
 

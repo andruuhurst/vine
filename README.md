@@ -4,17 +4,24 @@ Mobile first WordPress template. Ideal for non-profits and media driven organiza
 
 ## Getting Started
 
-Download and add theme to the WordPress themes directory.
-
-Or clone the git repository into the themes directory.
+Clone the git repository into the theme directory.
 ```
 git clone https://github.com/borozcod/vine.git
+```
+Navigate into the repository.
+```
+cd vine
+```
+Run Grunt.
+```
+grunt watch
 ```
 
 ## Built With
 
 * [SASS](http://sass-lang.com/)
 * [GRUNT](https://gruntjs.com/)
+* [smoothState.js](https://github.com/miguel-perez/smoothState.js?files=1)
 
 ## License
 

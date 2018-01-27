@@ -62,8 +62,8 @@
 	<div id="content" class="site-content">
 	<?php if(!is_front_page() && !is_singular('series') && !is_home()){ ?>
 		<?php if ( get_header_image() ) : ?>
-			<div class="header-graphic" style="background:url(<?php header_image(); ?>) ;">
-
+			<div class="header-graphic" style="background:url(<?php header_image(); ?>) ;" >
+				
 			</div>
 		<?php endif; ?>
 	<?php } ?>

@@ -15,6 +15,10 @@
     top:0;
     padding: 1em;
     margin: 0 2em;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
     font-family: $font__open_sans;
     color: #fff;
     background: rgba(0,0,0,0.2);
@@ -43,6 +47,8 @@
 .site-menu {
     margin-right: 20px;
     flex: 1 0 auto;
+    display: block;
+    text-align: right;
     img {
         width:30px;
     }
@@ -87,13 +93,13 @@
     }
 }
 
-@include responsive($medium) {
-    .site-header {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        flex-wrap: wrap;
+@include responsive($phone) {
+    .site-menu {
+        display: none;
     }
+}
+
+@include responsive($medium) {
 
     .site-branding {
         flex: 1 0 auto;

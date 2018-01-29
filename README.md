@@ -1,6 +1,6 @@
-# Vine WordPress Template
+# Vine WordPress Theme
 
-Mobile first WordPress template. Ideal for non-profits and media driven organizations.
+Mobile first WordPress Theme. Ideal for non-profits and media driven organizations.
 
 ## Getting Started
 

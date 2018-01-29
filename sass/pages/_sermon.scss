@@ -1,0 +1,37 @@
+.sermon {
+    @include responsive($medium) {
+        display: flex;
+    }
+    .sermon-description {
+        flex: 1;
+        @include responsive($medium) {
+            margin-right: 50px;
+        }
+        .entry-header {
+            display: inline-block;
+            padding: 0px 20px;
+            color: white;
+            background-color: $color__firefly;
+            h2 {
+                margin: 10px 0px;
+            }
+        }
+    }
+    .sermon-video{
+        position: relative;
+        padding-bottom: 56.25%;
+        @include responsive($medium) {
+            padding-bottom: 36.25%;
+        }
+        padding-top: 25px;
+        height: 0;
+        flex: 2;
+        iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+    }
+}

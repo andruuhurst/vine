@@ -14,11 +14,7 @@
     }
 }
 
-article {
-    @include transition(all .25s);
-}
-
-.header-img {
+article, .header-graphic, .header-img {
     @include transition(all .25s);
 }
 
@@ -34,6 +30,10 @@ article {
 
     .header-img {
         top: 60vh;
+    }
+
+    .header-graphic {
+        opacity: 0;
     }
 
     article {

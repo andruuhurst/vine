@@ -4,3 +4,5 @@ tmp
 .sass-cache
 *.css.map
 *.bat
+style.css
+style-human.css

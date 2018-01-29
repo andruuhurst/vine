@@ -25,9 +25,6 @@
 	<div <?php  body_class();  ?>  data-page-id="<?php the_ID(); ?>" id="page-inner">
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'vine' ); ?></a>
 	<header id="masthead" class="site-header">
-		<div class="site-menu">
-			<a href="javascript:;"><img src="<?php echo get_template_directory_uri(); ?>/images/menu.svg"/></a>
-		</div>
 		<div class="site-branding">
 			<?php
 			if(get_custom_logo()) :
@@ -48,9 +45,10 @@
 			endif;
 		 	?>
 		</div><!-- .site-branding -->
-
+		<div class="site-menu">
+			<a href="javascript:;"><img src="<?php echo get_template_directory_uri(); ?>/images/menu.svg"/></a>
+		</div>
 		<nav id="site-navigation" class="main-navigation">
-			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'vine' ); ?></button>
 			<?php
 				wp_nav_menu( array(
 					'theme_location' => 'menu-1',
@@ -58,12 +56,23 @@
 				) );
 			?>
 		</nav><!-- #site-navigation -->
+		<div class="mobile-navigation">
+			<div class="mn-inner">
+				<h2>Menu</h2>
+					<?php
+						wp_nav_menu( array(
+							'theme_location' => 'menu-1',
+							'menu_id'        => 'primary-menu',
+						) );
+					?>
+			</div>
+		</div>
 	</header><!-- #masthead -->
 	<div id="content" class="site-content">
 	<?php if(!is_front_page() && !is_singular('series') && !is_home()){ ?>
 		<?php if ( get_header_image() ) : ?>
 			<div class="header-graphic" style="background:url(<?php header_image(); ?>) ;" >
-				
+
 			</div>
 		<?php endif; ?>
 	<?php } ?>

@@ -12,10 +12,20 @@ Navigate into the repository.
 ```
 cd vine
 ```
+Install Grunt-cli.
+```
+npm install  -g grunt-cli
+```
+Install npm packages.
+```
+npm install
+```
 Run Grunt.
 ```
 grunt watch
 ```
+
+You'll need to make sure [SASS](http://sass-lang.com/install) is installed.
 
 ## Built With
 

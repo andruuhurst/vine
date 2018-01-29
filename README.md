@@ -4,11 +4,7 @@ Mobile first WordPress Theme. Ideal for non-profits and media driven organizatio
 
 ## Getting Started
 
-Clone the git repository into the theme directory.
-```
-git clone https://github.com/borozcod/vine.git
-```
-Navigate into the repository.
+Navigate into the theme.
 ```
 cd vine
 ```
